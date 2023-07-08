@@ -16,7 +16,7 @@ void SetConsoleView()
 }
  
 //커서의 위치를 x, y로 이동하는 함수
-void GotoXY(int x, int y)
+void [______________________]
 {
     COORD Pos;
     Pos.X = 2 * x;
@@ -102,8 +102,7 @@ bool isCollision(const int treeX, const int dinoY)
     //공룡의 높이가 충분하지 않다면 충돌로 처리
     GotoXY(0, 0);
     printf("treeX : %d, dinoY : %d", treeX, dinoY); //이런식으로 적절한 X, Y를 찾습니다.
-    if (treeX <= 8 && treeX >= 4 &&
-        dinoY > 8)
+    [______________________]
     {
         return true;
     }
@@ -143,11 +142,11 @@ int main()
             }
  
             //점프중이라면 Y를 감소, 점프가 끝났으면 Y를 증가.
-            if (isJumping)
+            [_____________]
             {
                 dinoY -= gravity;
             }
-            else
+            [_____________]
             {
                 dinoY += gravity;
             }
@@ -162,8 +161,9 @@ int main()
             //나무가 왼쪽으로 (x음수) 가도록하고
             //나무의 위치가 왼쪽 끝으로가면 다시 오른쪽 끝으로 소환.
             treeX -= 4;
+		
             if (treeX <= 0){
-                treeX = TREE_BOTTOM_X;
+                [_____________]
                 high=rand() % 6;
                 high_had=TREE_BOTTOM_Y-high-1;
             }
